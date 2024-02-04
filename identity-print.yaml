@@ -1,0 +1,15 @@
+---
+- name: Test Mikrotik commands
+  hosts: mikrotik
+  gather_facts: false
+  tasks: 
+     
+  - name: Test command 1
+    routeros_command:
+      commands:
+      - /system identity print
+      
+  - name: Test command 2
+    routeros_command:
+      commands:
+      - /system identity print
