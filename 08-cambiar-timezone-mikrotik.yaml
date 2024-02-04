@@ -1,0 +1,9 @@
+---
+- hosts: mikrotik
+
+  tasks:
+
+    - name: Cambiar timezone
+      routeros_command:
+       commands:
+       - /system/clock/set time-zone-name=Europe/Madrid

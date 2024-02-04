@@ -1,0 +1,9 @@
+---
+- hosts: mikrotik
+
+  tasks:
+
+    - name: Cambiar servidores NTP
+      routeros_command:
+       commands:
+       - /system/ntp/client/set enabled=yes servers=147.156.7.26,173.212.243.115
