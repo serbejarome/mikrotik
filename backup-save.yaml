@@ -1,0 +1,9 @@
+---
+- hosts: mikrotik
+
+  tasks:
+
+    - name: Backup save
+      routeros_command:
+       commands:
+       - system/backup/save dont-encrypt=yes name=backup.backup
