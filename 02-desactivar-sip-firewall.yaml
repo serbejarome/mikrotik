@@ -1,0 +1,9 @@
+---
+- hosts: mikrotik
+
+  tasks:
+
+    - name: Desactivar SIP firewall
+      routeros_command:
+       commands:
+       - /ip/firewall/service-port/disable sip
