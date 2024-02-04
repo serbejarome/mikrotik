@@ -1,0 +1,9 @@
+---
+- hosts: mikrotik
+
+  tasks:
+
+    - name: Añadir IP
+      routeros_command:
+       commands:
+       - ip/address/add address=10.10.1.2/24 interface=ethe1
