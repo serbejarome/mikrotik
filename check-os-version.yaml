@@ -1,0 +1,15 @@
+---
+- hosts: mikrotik
+
+  tasks:
+
+    - name: Check OS version on device servers
+      routeros_command:
+       commands: /system package print
+      register: version_output
+
+    - name: Display facts variables
+      debug:
+        var: version_output
+
+...
