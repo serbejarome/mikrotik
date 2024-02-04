@@ -1,0 +1,9 @@
+---
+- hosts: mikrotik
+
+  tasks:
+
+    - name: Desactivar servicios por defecto
+      routeros_command:
+       commands:
+       - /ip/service/set api,api-ssl,ftp,telnet,www-ssl disabled=yes
