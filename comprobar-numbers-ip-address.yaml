@@ -1,0 +1,15 @@
+---
+- hosts: mikrotik
+
+  tasks:
+
+    - name: Comprobar number IP address
+      routeros_command:
+       commands: /ip address print
+      register: numbers_address_id
+
+    - name: Display number address ID
+      debug:
+        var: numbers_address_id
+
+...
