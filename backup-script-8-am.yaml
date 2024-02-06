@@ -1,0 +1,9 @@
+---
+- hosts: mikrotik
+
+  tasks:
+
+    - name: Backup save
+      routeros_command:
+       commands:
+       - system/script/run backup-8-am-mikrotik
